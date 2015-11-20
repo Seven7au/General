@@ -1,0 +1,28 @@
+/* Function to return a sequence of Fibonacci numbers to the place determined by the user input - Written in C language - Seven Vinton 2015 */
+#include <stdio.h>
+#include <stdlib.h>
+int place = 0;
+
+void fibonacci();
+void fibonacci(){
+int n1 = 0;
+int n2 = 1;
+int i;
+for (i = 0; i<place; i = i+1){
+int result = n1+n2;
+printf("%d ",n1);
+n1 = n2;
+n2 = result;
+}
+}
+int main(){
+char ans = 'y';
+while (ans == 'y'){
+printf("please enter the number of Fibonacci places that you require\n");
+scanf("%d", &place);// the user input determines the number of places shown from the sequence
+fibonacci();
+printf("\nWould you like another turn? y/n");
+scanf(" %c", &ans);
+}
+return 0;
+}
