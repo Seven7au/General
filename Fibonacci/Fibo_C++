@@ -1,0 +1,28 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+int place = 0;
+void fibonacci();
+void fibonacci(){
+int n1 = 0;
+int n2 = 1;
+int i;
+for (i = 0; i<place; i = i++){
+int result = n1+n2;
+cout << n1 << endl;
+n1 = n2;
+n2 = result;
+}
+}
+int main()
+{
+char ans = 'y';
+while (ans == 'y'){
+cout << "please enter the number of Fibonacci places that you require" << endl;
+cin >> place;// the user input determines the number of places shown from the sequence
+fibonacci();
+cout <<"Would you like another turn? y/n" << endl;
+cin >> ans;
+}
+    return 0;
+}
