@@ -1,0 +1,32 @@
+import sys
+ans1 = 'y'
+numList = []
+n = 0
+
+def numberList(n):
+    n = input("Please enter a number\n")
+    while n.isnumeric() == False:
+        n = input("Invalid answer. Please try again\n")
+    numList.append(n)
+
+while ans1 == 'y':
+ 
+    turn = 'y'
+    while turn == 'y':
+       numberList(n)
+       turn = input("Do you have another number to enter? y/n\n")
+    
+    numList = list(map(int, numList))
+    
+
+    print("The numbers which you entered were: ", numList)
+    numList.sort()
+    print("Here are your numbers in sorted order from smallest to largest: ", numList)
+    ans1 = input("Would you like another turn? y/n\n")
+    
+    while ans1 !='y':
+        if ans1 is not 'n':
+            ans1 = input("Invalid answer. Please try again\n")
+        if ans1 == 'n':
+            print("Goodbye!")
+            sys.exit(0)
