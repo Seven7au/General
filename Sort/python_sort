@@ -1,0 +1,32 @@
+import sys
+ans1 = 'y'
+
+while ans1 == 'y':
+    num1 = input("Please enter a number\n")
+    while num1.isnumeric() == False:
+        num1 = input("Invalid answer. Please try again\n")
+    num2 = input("Please enter a second number\n")
+    while num2.isnumeric() == False:
+        num2 = input("Invalid answer. Please try again\n")
+    num3 = input("Please enter a third number\n")
+    while num3.isnumeric() == False:
+        num3 = input("Invalid answer. Please try again\n")
+    
+    num1 = int(num1)
+    num2 = int(num2)
+    num3 = int(num3)
+    numList = [num1, num2, num3]
+    
+
+    print("The numbers which you entered were: ", numList)
+    numList.sort()
+    print("Here are your numbers in sorted order from smallest to largest: ", numList)
+    ans1 = input("Would you like another turn? y/n\n")
+    
+    while ans1 !='y':
+        if ans1 is not 'n':
+            ans2 = input("Invalid answer. Please try again\n")
+            ans1 = ans2
+        if ans1 == 'n':
+            print("Goodbye!")
+            sys.exit(0)
